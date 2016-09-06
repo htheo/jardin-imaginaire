@@ -40,6 +40,7 @@ if (!isset($_POST['pseudo'])) //On est dans la page de formulaire
 	 
 	</div>
 	
+	
 	<div class="container">';
 
     foreach($row as $rows){
@@ -49,7 +50,9 @@ if (!isset($_POST['pseudo'])) //On est dans la page de formulaire
     }
 	echo'
 	</div>
+	
 	<div class="container">';
+    echo '<small class="align-left">Dernier message</small>';
 
     $last_post = end($row);
 
