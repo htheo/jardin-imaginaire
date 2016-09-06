@@ -34,14 +34,29 @@ if ($id == 0){
 
     // UPDATE POSTS
 
-    if(isset($_POST['updatetitle'])){
+    if(isset($_POST['updatetitle']) OR isset($_POST['updatedesc']) AND isset($_POST['id'])){
 
-        $query=$db->prepare('UPDATE posts SET title = :title, description = :description WHERE title = :title');
-        $query->execute(array(
-            'title' => $title,
-            'desc' => $desc,
-            'date' => $date
-        ));
+        $id = $_POST['id'];
+        $updatetitle = $_POST['updatetitle'];
+        $updatedesc = $_POST['updatedesc'];
+
+        $query=$db->prepare('UPDATE posts SET title = :title, description = :description WHERE id = :id');
+        if($query->execute(array(
+            'title' => $updatetitle,
+            'description' => $updatedesc,
+            'id' => $id
+        )))
+        {
+            echo '<a href="index.php">Vous confirmez ? </a><br>
+                <b>Titre:</b> '.$updatetitle.' <b>Contenu: </b>'.$updatedesc.'  ('.$id.') <!--<script>  window.location.href = "index.php";</script>--> ';
+
+
+        }else{
+
+            echo 'Erreur <script>  window.location.href = "index.php";</script>';
+
+
+        };
 
     }
 
@@ -49,29 +64,34 @@ if ($id == 0){
 
     echo '<h2>Les entrées existantes</h2>
             <small>Modifiez les entrées en cliquant dessus</small>
-    <table class="entrees">
-            <tr>
-                <th width="30">N°</th>
-                <th>Titre</th>
-                <th>Contenu</th>
-                <th>Date</th>
-            </tr>
-            
-            <form action="dashboard.php" method="post">';
-    foreach($row as $rows){
-        $date->setTimestamp($rows['date_creation']);
-        echo '
-            <tr>
-                <td width="30"><input class="input-table" value="'.$rows['id'].'"></td>
-                <td><input name="updatetitle" class="input-table" value="'.$rows['title'].'"></td>
-                <td><input class="input-table" value="'.$rows['description'].'"></td>
-                <td><input class="input-table" value="'.$date->format('U = Y-m-d H:i').'"></td>
-            </tr>
-';
+                    <table class="entrees">
+                            <tr>
+                                <th width="30">N°</th>
+                                <th>Titre</th>
+                                <th>Contenu</th>
+                                <th>Date</th>
+                                <th>Valider</th>
+                            </tr>';
 
+
+    foreach($row as $rows){
+        $date = new DateTime();
+        $date->setTimestamp($rows['date_creation']);
+
+        echo '
+                            <tr>
+                                <form action="dashboard.php" method="post">
+                                <td width="30"><input name="id" class="input-table" value="'.$rows['id'].'"></td>
+                                <td><input name="updatetitle" class="input-table" value="'.$rows['title'].'"></td>
+                                <td><input name="updatedesc" class="input-table" value="'.$rows['description'].'"></td>
+                                <td><input class="input-table" value="'.$date->format('Y-m-d H:i:s').'"></td>
+                                <td><button type="submit"/>Modifier</td>
+                                </form>
+                            </tr>';
     }
 
-    echo '<input type="submit" value="Valider les modifications"></form></table><br>';
+    echo '</table>
+                <br>';
 
 
 
@@ -124,10 +144,10 @@ if ($id == 0){
 
     }else{
 
-    $title = NULL;
-    $desc = NULL;
-    $date = NULL;
+        $title = NULL;
+        $desc = NULL;
+        $date = NULL;
 
-}
+    }
 }
 ?>
