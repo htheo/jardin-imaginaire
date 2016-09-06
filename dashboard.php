@@ -34,21 +34,23 @@ if ($id == 0){
 
     // UPDATE POSTS
 
-    if(isset($_POST['updatetitle']) OR isset($_POST['updatedesc']) AND isset($_POST['id'])){
+    if(isset($_POST['updatetitle']) OR isset($_POST['updatedesc']) OR isset($_POST['updatecode']) AND isset($_POST['id'])){
 
         $id = $_POST['id'];
         $updatetitle = $_POST['updatetitle'];
         $updatedesc = $_POST['updatedesc'];
+        $updatecode = $_POST['updatecode'];
 
-        $query=$db->prepare('UPDATE posts SET title = :title, description = :description WHERE id = :id');
+        $query=$db->prepare('UPDATE posts SET title = :title, description = :description, code = :code WHERE id = :id');
         if($query->execute(array(
             'title' => $updatetitle,
             'description' => $updatedesc,
+            'code' => $updatecode,
             'id' => $id
         )))
         {
             echo '<a href="index.php">Vous confirmez ? </a><br>
-                <b>Titre:</b> '.$updatetitle.' <b>Contenu: </b>'.$updatedesc.'  ('.$id.') <!--<script>  window.location.href = "index.php";</script>--> ';
+                <b>Titre:</b> '.$updatetitle.' <b>Contenu: </b>'.$updatedesc.' <b>Code</b>: '.$updatecode.'  ('.$id.') <!--<script>  window.location.href = "index.php";</script>--> ';
 
 
         }else{
@@ -69,6 +71,7 @@ if ($id == 0){
                                 <th width="30">N°</th>
                                 <th>Titre</th>
                                 <th>Contenu</th>
+                                <th>Code</th>
                                 <th>Date</th>
                                 <th>Valider</th>
                             </tr>';
@@ -84,6 +87,7 @@ if ($id == 0){
                                 <td width="30"><input name="id" class="input-table" value="'.$rows['id'].'"></td>
                                 <td><input name="updatetitle" class="input-table" value="'.$rows['title'].'"></td>
                                 <td><input name="updatedesc" class="input-table" value="'.$rows['description'].'"></td>
+                                <td><input name="updatecode" class="input-table" value="'.$rows['code'].'"></td>
                                 <td><input class="input-table" value="'.$date->format('Y-m-d H:i:s').'"></td>
                                 <td><button type="submit"/>Modifier</td>
                                 </form>

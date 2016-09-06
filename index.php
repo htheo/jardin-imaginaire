@@ -20,6 +20,12 @@ if ($id!=0){
 if (!isset($_POST['pseudo'])) //On est dans la page de formulaire
 {
 
+    $req = $db->prepare('SELECT * FROM posts');
+
+    $req->execute();
+
+    $row = $req->fetchAll();
+
     echo '
     <h1>Site .fr</h1>
     <form method="post" action="index.php">
@@ -32,6 +38,24 @@ if (!isset($_POST['pseudo'])) //On est dans la page de formulaire
 	</form>
 	<a href="./register.php">Pas encore inscrit ?</a>
 	 
+	</div>
+	
+	<div class="container">';
+
+    foreach($row as $rows){
+        if($rows['code'] == 'WEL16'){
+            echo '<h2>'.$rows['title'].'</h2><p class="align-left">'.$rows['description'].'</p>';
+        }
+    }
+	echo'
+	</div>
+	<div class="container">';
+
+    $last_post = end($row);
+
+            echo '<h2>'.$last_post['title'].'</h2><p class="align-left">'.$last_post['description'].'</p>';
+
+	echo'
 	</div>
 	
 	</div>
