@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc81a03e-6919-4b75-9b2b-769a20198991" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dashboard.php" afterPath="$PROJECT_DIR$/dashboard.php" />
     </list>
     <ignored path="admin_st.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +38,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/config.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -70,27 +71,21 @@
       <file leaf-file-name="dashboard.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+            <state relative-caret-position="585">
+              <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
               <folding>
-                <marker date="1473174090000" expanded="true" signature="366:448" ph="..." />
-                <marker date="1473174090000" expanded="true" signature="677:696" ph="SELECT * FRO... posts" />
-                <marker date="1473174090000" expanded="true" signature="1200:1400" ph="..." />
-                <marker date="1473174090000" expanded="true" signature="1217:1368" ph="..." />
-                <marker date="1473174090000" expanded="true" signature="1462:1841" ph="..." />
-                <marker date="1473174090000" expanded="true" signature="2029:2286" ph="..." />
-                <marker date="1473174090000" expanded="true" signature="2514:2597" ph="INSERT INTO posts... " />
+                <marker date="1473174775000" expanded="true" signature="366:448" ph="..." />
+                <marker date="1473174775000" expanded="true" signature="677:696" ph="SELECT * FRO... posts" />
+                <marker date="1473174775000" expanded="true" signature="843:923" ph="UPDATE posts... " />
+                <marker date="1473174775000" expanded="true" signature="1203:1426" ph="..." />
+                <marker date="1473174775000" expanded="true" signature="1203:1440" ph="..." />
+                <marker date="1473174775000" expanded="true" signature="1220:1371" ph="..." />
+                <marker date="1473174775000" expanded="true" signature="1555:1883" ph="..." />
+                <marker date="1473174775000" expanded="true" signature="1555:1884" ph="..." />
+                <marker date="1473174775000" expanded="true" signature="1555:1942" ph="..." />
+                <marker date="1473174775000" expanded="true" signature="2185:2442" ph="..." />
+                <marker date="1473174775000" expanded="true" signature="2670:2753" ph="INSERT INTO posts... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -161,8 +156,8 @@
         <option value="$PROJECT_DIR$/logout.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/css/design.css" />
-        <option value="$PROJECT_DIR$/dashboard.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/dashboard.php" />
       </list>
     </option>
   </component>
@@ -297,12 +292,20 @@
       <workItem from="1473062248140" duration="1044000" />
       <workItem from="1473066740176" duration="4148000" />
       <workItem from="1473153962865" duration="8869000" />
-      <workItem from="1473174096067" duration="34000" />
+      <workItem from="1473174096067" duration="807000" />
     </task>
+    <task id="LOCAL-00001" summary="Adding gitignore">
+      <created>1473174145760</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1473174145760</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21180000" />
+    <option name="totallyTimeSpent" value="21953000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -349,6 +352,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adding gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding gitignore" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -383,13 +390,17 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1473174090000" expanded="true" signature="366:448" ph="..." />
-            <marker date="1473174090000" expanded="true" signature="677:696" ph="SELECT * FRO... posts" />
-            <marker date="1473174090000" expanded="true" signature="1200:1400" ph="..." />
-            <marker date="1473174090000" expanded="true" signature="1217:1368" ph="..." />
-            <marker date="1473174090000" expanded="true" signature="1462:1841" ph="..." />
-            <marker date="1473174090000" expanded="true" signature="2029:2286" ph="..." />
-            <marker date="1473174090000" expanded="true" signature="2514:2597" ph="INSERT INTO posts... " />
+            <marker date="1473174775000" expanded="true" signature="366:448" ph="..." />
+            <marker date="1473174775000" expanded="true" signature="677:696" ph="SELECT * FRO... posts" />
+            <marker date="1473174775000" expanded="true" signature="843:923" ph="UPDATE posts... " />
+            <marker date="1473174775000" expanded="true" signature="1203:1426" ph="..." />
+            <marker date="1473174775000" expanded="true" signature="1203:1440" ph="..." />
+            <marker date="1473174775000" expanded="true" signature="1220:1371" ph="..." />
+            <marker date="1473174775000" expanded="true" signature="1555:1883" ph="..." />
+            <marker date="1473174775000" expanded="true" signature="1555:1884" ph="..." />
+            <marker date="1473174775000" expanded="true" signature="1555:1942" ph="..." />
+            <marker date="1473174775000" expanded="true" signature="2185:2442" ph="..." />
+            <marker date="1473174775000" expanded="true" signature="2670:2753" ph="INSERT INTO posts... " />
           </folding>
         </state>
       </provider>
@@ -665,14 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -681,26 +684,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard.php">
+    <entry file="file://$PROJECT_DIR$/.git/info/exclude">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
-          <folding>
-            <marker date="1473174090000" expanded="true" signature="366:448" ph="..." />
-            <marker date="1473174090000" expanded="true" signature="677:696" ph="SELECT * FRO... posts" />
-            <marker date="1473174090000" expanded="true" signature="1200:1400" ph="..." />
-            <marker date="1473174090000" expanded="true" signature="1217:1368" ph="..." />
-            <marker date="1473174090000" expanded="true" signature="1462:1841" ph="..." />
-            <marker date="1473174090000" expanded="true" signature="2029:2286" ph="..." />
-            <marker date="1473174090000" expanded="true" signature="2514:2597" ph="INSERT INTO posts... " />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="615">
+          <caret line="41" column="54" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+          <folding>
+            <marker date="1473174775000" expanded="true" signature="366:448" ph="..." />
+            <marker date="1473174775000" expanded="true" signature="677:696" ph="SELECT * FRO... posts" />
+            <marker date="1473174775000" expanded="true" signature="843:923" ph="UPDATE posts... " />
+            <marker date="1473174775000" expanded="true" signature="1203:1426" ph="..." />
+            <marker date="1473174775000" expanded="true" signature="1203:1440" ph="..." />
+            <marker date="1473174775000" expanded="true" signature="1220:1371" ph="..." />
+            <marker date="1473174775000" expanded="true" signature="1555:1883" ph="..." />
+            <marker date="1473174775000" expanded="true" signature="1555:1884" ph="..." />
+            <marker date="1473174775000" expanded="true" signature="1555:1942" ph="..." />
+            <marker date="1473174775000" expanded="true" signature="2185:2442" ph="..." />
+            <marker date="1473174775000" expanded="true" signature="2670:2753" ph="INSERT INTO posts... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>

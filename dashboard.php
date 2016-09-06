@@ -34,14 +34,16 @@ if ($id == 0){
 
     // UPDATE POSTS
 
-    if(isset($_POST['updatetitle']))
+    if(isset($_POST['updatetitle'])){
 
-///*$req = $bdd->prepare('UPDATE jeux_video SET prix = :nvprix, nbre_joueurs_max = :nv_nb_joueurs WHERE nom = :nom_jeu');
-//$req->execute(array(
-//    'nvprix' => $nvprix,
-//    'nv_nb_joueurs' => $nv_nb_joueurs,
-//    'nom_jeu' => $nom_jeu
-//));*/
+        $query=$db->prepare('UPDATE posts SET title = :title, description = :description WHERE title = :title');
+        $query->execute(array(
+            'title' => $title,
+            'desc' => $desc,
+            'date' => $date
+        ));
+
+    }
 
 
 
@@ -55,20 +57,21 @@ if ($id == 0){
                 <th>Date</th>
             </tr>
             
-            <form>';
+            <form action="dashboard.php" method="post">';
     foreach($row as $rows){
+        $date->setTimestamp($rows['date_creation']);
         echo '
             <tr>
                 <td width="30"><input class="input-table" value="'.$rows['id'].'"></td>
                 <td><input name="updatetitle" class="input-table" value="'.$rows['title'].'"></td>
                 <td><input class="input-table" value="'.$rows['description'].'"></td>
-                <td><input class="input-table" value="'.$rows['date_creation'].'"></td>
+                <td><input class="input-table" value="'.$date->format('U = Y-m-d H:i').'"></td>
             </tr>
 ';
 
     }
 
-    echo '</form></table><br>';
+    echo '<input type="submit" value="Valider les modifications"></form></table><br>';
 
 
 
@@ -98,9 +101,9 @@ if ($id == 0){
 
 
         $query=$db->prepare('INSERT INTO posts (title, description, date_creation) VALUES (:title, :desc, :date)');
-//        $query->bindValue(':title', $title, PDO::PARAM_STR);
-//        $query->bindValue(':desc', $desc, PDO::PARAM_STR);
-//        $query->bindValue(':date', $date, PDO::PARAM_STR);
+        $query->bindValue(':title', $title, PDO::PARAM_STR);
+        $query->bindValue(':desc', $desc, PDO::PARAM_STR);
+        $query->bindValue(':date', $date, PDO::PARAM_STR);
         if($query->execute(array(
             'title' => $title,
             'desc' => $desc,
