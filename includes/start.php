@@ -25,6 +25,6 @@ $id=(isset($_SESSION['id']))?(int) $_SESSION['id']:0;
 $pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
 
 //On inclue les 2 pages restantes
-include("../includes/functions.php");
-include("../includes/constants.php");
+//include("../includes/functions.php");
+//include("../includes/constants.php");
 ?>
