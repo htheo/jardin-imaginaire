@@ -12,8 +12,31 @@
         <hr>
         <p>Vous pourrez gérer ici vos horaires et autres textes de votre site.</p>';
         // On récupère les posts existants
+        $users = db_select('SELECT * FROM users');
+        echo '<h2>Les utilisateurs existants</h2>
+                <small>Modifiez les informations en cliquant dessus</small>
+                        <table class="entrees">
+                                <tr>
+                                    <th width="30">N°</th>
+                                    <th>Pseudo</th>
+                                    <th>Niveau de profil</th>
+                                    <th>Valider</th>
+                                </tr>';
+        foreach($users as $user){
+            echo '
+                                <tr>
+                                    <form action="admin.php?action=update&panel=edit-users" method="post">
+                                    <td width="30"><input name="id" class="input-table" value="'.$user['id'].'"></td>
+                                    <td><input name="updatepseudo" class="input-table" value="'.$user['useradmin'].'"></td>
+                                    <td><input name="updatelevel" class="input-table" value="'.$user['admin'].'"></td>
+                                    <td><button type="submit"/>Modifier</td>
+                                    </form>
+                                </tr>';
+        }
+        echo '</table>
+                    <br>';
        
-        $row = db_select('SELECT * FROM posts');
+        $rows = db_select('SELECT * FROM posts');
         
         echo '<h2>Les entrées existantes</h2>
                 <small>Modifiez les entrées en cliquant dessus</small>
@@ -26,16 +49,16 @@
                                     <th>Date</th>
                                     <th>Valider</th>
                                 </tr>';
-        foreach($row as $rows){
+        foreach($rows as $row){
             $date = new DateTime();
-            $date->setTimestamp($rows['date_creation']);
+            $date->setTimestamp($row['date_creation']);
             echo '
                                 <tr>
                                     <form action="admin.php?action=update&panel=edit-posts" method="post">
-                                    <td width="30"><input name="id" class="input-table" value="'.$rows['id'].'"></td>
-                                    <td><input name="updatetitle" class="input-table" value="'.$rows['title'].'"></td>
-                                    <td><input name="updatedesc" class="input-table" value="'.$rows['description'].'"></td>
-                                    <td><input name="updatecode" class="input-table" value="'.$rows['code'].'"></td>
+                                    <td width="30"><input name="id" class="input-table" value="'.$row['id'].'"></td>
+                                    <td><input name="updatetitle" class="input-table" value="'.$row['title'].'"></td>
+                                    <td><input name="updatedesc" class="input-table" value="'.$row['description'].'"></td>
+                                    <td><input name="updatecode" class="input-table" value="'.$row['code'].'"></td>
                                     <td><input class="input-table" value="'.$date->format('Y-m-d H:i:s').'"></td>
                                     <td><button type="submit"/>Modifier</td>
                                     </form>

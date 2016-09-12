@@ -14,6 +14,9 @@ if (isset($_SESSION['pseudo'])){
     		case 'edit-posts':
     			include 'forms/edit-article-v.php';
     			break;
+            case 'edit-users':
+                include 'forms/edit-user-v.php';
+                break;
     		default:
     			include 'blocs/default.php';
     			break;

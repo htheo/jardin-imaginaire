@@ -14,7 +14,7 @@ $tab_page_all_in_url=explode('?',$nom_page_all_in_url);
 $nom_page=$tab_page_all_in_url[0];
 
 if (empty($nom_page)){
-    $nom_page='home.php';
+    $nom_page='home';
     $template=$nom_page;
     }
 else{
