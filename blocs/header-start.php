@@ -11,12 +11,7 @@
     <link rel="stylesheet" media="screen" type="text/css" title="Design" href="css/design.css" />
 </head>
 <!-- CE SITE A BESOIN DE JAVASCRIPT POUR FONCTIONNER CORRECTEMENT-->
-<nav class="menu">
-    <ul>
-        <a href="index.php"><li>Accueil</li></a>
-        <a href="logout.php"><li>Déconnexion</li></a>
-    </ul>
-</nav>
+<body>
 <?php
 
 //Attribution des variables de session
@@ -24,7 +19,7 @@
 $id=(isset($_SESSION['id']))?(int) $_SESSION['id']:0;
 $pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
 
-//On inclue les 2 pages restantes
-include("../includes/functions.php");
-include("../includes/constants.php");
+// //On inclue les 2 pages restantes
+// include("/functions.php");
+// include("/constants.php");
 ?>

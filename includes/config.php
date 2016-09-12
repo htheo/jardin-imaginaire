@@ -1,10 +1,6 @@
 <?php
-try
-{
-    $db = new PDO('mysql:host=localhost;dbname=admin_st', 'root', 'root');
-}
-catch (Exception $e)
-{
-    die('Erreur : ' . $e->getMessage());
-}
+$url_base='http://localhost/admin_ds/';
+$debug=false;
+$is_local=true;
+
 ?>
