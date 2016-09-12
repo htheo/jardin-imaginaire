@@ -18,6 +18,16 @@ if(isset($_GET['panel'])){
 			}
 			
 			break;
+		case 'inscription':
+			if(isset($_POST['pseudo']) && isset($_POST['password'])){
+				$pseudo=htmlentities($_POST['pseudo']);
+				$password=htmlentities($_POST['password']);
+				include 'forms/inscription-v.php';
+			}else{
+				$tab_alerte['error']="Problème lors de l'inscription";
+				include 'blocs/erreur.php';
+			}
+			break;
 		
 		default:
 			include 'blocs/default.php';

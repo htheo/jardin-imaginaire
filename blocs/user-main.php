@@ -1,6 +1,5 @@
 <?php
 if(isset($_SESSION['pseudo'])||isset($pseudo)){
-	$pseudo=$_SESSION['pseudo'];
 	if(isset($_GET['panel'])){
 		switch ($_GET['panel']) {
 			case 'connexion':
