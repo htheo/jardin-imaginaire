@@ -6,6 +6,7 @@
     echo (!empty($titre))?'<title>'.$titre.'</title>':'<title> Admin ST</title>';
     ?>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
     <link rel="stylesheet" media="screen" type="text/css" title="Design" href="css/design.css" />

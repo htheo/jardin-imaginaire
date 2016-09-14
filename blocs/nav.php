@@ -1,14 +1,15 @@
 <nav class="menu">
     <ul>
-        <li><a href="home.php">Accueil</a></li>
+        
         <?php
 
-
-        if (isset($_SESSION['pseudo'])) {
-            echo '<li><a href="admin.php">Espace admin</a></li>';
-            echo '<li><a href="?logout=true">Déconnexion</a></li>';
+        echo '<a href="home"><li>Accueil</li></a>';
+        echo '<a href="galerie"><li>Galerie</li></a>';
+        echo '<a href="devis"><li>Devis</li></a>';
+        if (isset($pseudo)) {
+            echo '<a href="admin.php"><li>Espace admin</li></a>';
+            echo '<a href="?logout=true"><li>Déconnexion</li></a>';
         }else{
-            echo '<li><a href="connexion.php">Se connecter</a></li>';
         }
         ?>      
         

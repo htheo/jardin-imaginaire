@@ -14,18 +14,17 @@ $tab_page_all_in_url=explode('?',$nom_page_all_in_url);
 $nom_page=$tab_page_all_in_url[0];
 
 if (empty($nom_page)){
-    $nom_page='home';
+    $nom_page='home.php';
     $template=$nom_page;
     }
 else{
-    if (is_file('templates/'.$nom_page)){
-        $template=$nom_page;
+    if (is_file('templates/'.$nom_page).'.php'){
+        $template=$nom_page.'.php';
         }
         else{
             $template='404.php';
         }
     }
-
 
 
 
