@@ -1,9 +1,9 @@
 <?php
 $db_host='localhost';
-$db_name='admin_st';
+$db_name='jardins';
 $db_charset='utf8';
 $db_user='root';
-$db_pass='root';
+$db_pass='password';
 
 
 try

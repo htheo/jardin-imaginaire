@@ -46,3 +46,8 @@ crashlytics-build.properties
 fabric.properties
 
 .gitignore
+
+includes/baseconnect.php
+includes/config.php
+
+img/
