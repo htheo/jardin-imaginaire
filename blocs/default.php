@@ -11,14 +11,13 @@
 
 </div>
 <div class="pres_paysagiste">
-	<div class="col_gauche">
-		<img src="img/bastien.png">
-	</div>
-	<div class="col_droite">
+	
+	<div class="pres">
 		<h2>Bastien Saudemont</h2>
 		<p>Paysagiste Toulousain <br>
-			Bastien est capable de lorem ipsum</p>
+		Bastien est capable de te lustrer ton poteau, te défourer le pot, mais aussi de dégainer sa truelle.</p>
 	</div>
+
 	
 
 </div>
